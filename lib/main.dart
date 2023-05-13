@@ -174,8 +174,6 @@ class _MyAppState extends State<MyApp> {
 
   void equalPressed() {
     String finaluserinput = usertext;
-    //finaluserinput = usertext.replaceAll('x', '*');
- 
     Parser p = Parser();
     Expression exp = p.parse(finaluserinput);
     ContextModel cm = ContextModel();
@@ -183,6 +181,7 @@ class _MyAppState extends State<MyApp> {
     result = eval.toString();
   }
 }
+
  bool isOperator(String x) {
     if (x == '/' || x == '*' || x == '-' || x == '+' || x == '=') {
       return true;
